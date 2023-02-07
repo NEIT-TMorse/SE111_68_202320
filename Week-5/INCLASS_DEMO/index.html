@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="T Morse">
+    <meta name="description" content="W5 Tables & Forms Demo">
+
+
+    <title>W5 | Tables & Forms Demo</title>
+</head>
+<body>
+    
+<h1>Basic Form Table Demo</h1>
+
+<h2>Forms w/o Tables</h2>
+
+<!--text: text fields for manual entry by user - value becomes what user types-->
+<form>
+
+        <!--first name-->
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="first-name-input">
+
+        <!--labels are used to match up with input elements
+    
+        for attribute value connects label element with input element
+        name attribute value connects input element with label elemnet
+        -->
+    <br>
+        <!--Last name-->
+        <label for="lastName">Last Name: </label>
+        <input type="" name="lastName" id="last-name-input">
+
+    <br>
+        <!--email-->
+        <label for="email">Email:    </label>
+        <input type="text" name="email" id="email-input">
+
+    <br>
+        <!--submit button - REQUIRED for any form with 1 input field-->
+        <input type="submit" value="SUBMIT :D">
+
+
+</form>
+
+<h2>Form w/ Table</h2>
+
+<form method="GET" action="HTML/JS FILE NAME/PATH">
+
+    <table>
+        
+        <tbody><!--REQUIRED for all tables!-->
+
+
+            <tr>
+
+                <td>
+                    <label for="firstname">First Name:</label>
+                </td>
+                    
+                <td>
+                    <input type="text" name="lastname" id="first-name-2-input">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label for="lastname">Last Name:</label>
+                </td>
+                    
+                <td>
+                    <input type="text" name="lastname" id="last-name-2-input">
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <label for="email">E-mail:</label>
+                </td>
+                    
+                <td>
+                    <input type="text" name="lastname" id="last-name-2-input" required>
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    
+                </td>
+                    
+                <td>
+                    <input type="text" value="SUBMIT">
+                </td>
+
+            </tr>
+
+            <!--NON-TEXT INPUT-->
+            <tr>
+
+                <td>
+                    <label for="favColor">Choose your favorite Color:</label>
+                </td>
+                    
+                <td>
+                    <Select name="faveColor">
+                        <option value="red">RED</option>
+                        <option value="green">GREEN</option>
+                        <option value="yellow">YELLOW</option>
+
+                    </Select>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label for="study">Program of Study</label>
+                </td>
+
+                <td>
+                    <input type="radio" name="study" value="SE">Software Engineering <br>
+                    <input type="radio" name="study" value="CYB">CyberSecurity <br>
+                    <input type="radio" name="study" value="WB">Web Development <br>
+
+                </td>
+
+
+
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="date">Date: </label>
+                </td>
+
+                <td>
+                    <input type="date" name="date">
+                </td>
+
+            </tr>
+
+            <!--checkboxes allow for MULTIPLE responses-->
+            <tr>
+
+                <td>
+                    <label for="vehicle"> Select Your Vehicles: </label>
+                </td>
+
+                <td>
+                    <input type="checkbox" name="vehicle1" value="car">CAR <br>
+                    <input type="checkbox" name="vehicle2" value="car">ROCINANTE <br>
+                    <input type="checkbox" name="vehicle3" value="car">MOTORCYCLE <br>
+                    <input type="checkbox" name="vehicle4" value="car">BICYCLE <br>
+                    <input type="checkbox" name="vehicle5" value="car">DRAGON <br>
+                    <input type="checkbox" name="vehicle6" value="car">ROACH <br>
+
+                </td>
+
+
+            </tr>
+
+
+
+        </tbody>
+
+
+    </table>
+
+
+</form>
+
+</body>
+</html>
