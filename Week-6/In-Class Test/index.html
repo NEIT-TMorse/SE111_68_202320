@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+
+    <script>
+//EVERYTHING INSIDE OF <SCRIPT> TAGS MUST BE WRITTEN IN JAVASCRIPT
+
+    //CREATING (DECLARING) A VARIABLE -- KEYWORD "var"
+        var num1 = 10
+        var num2 = 7
+
+        //cannot use num1 or num2 until they have value assigned (=)
+        //variable assignment --> definition
+
+        var sum = num1 + num2
+
+        //test our value in the console - displaying variable values
+        console.log(num1, num2, sum)
+        console.log(sum)
+
+        //alert() allows for a pop-up in the browser page to display info to the user
+        //alert() --> print() in PYTHON
+        alert(sum)              //just displays stored value
+        console.log("HI")
+        alert("The sum is: ", sum) //displays string then stored value
+        alert(`The sum is: ${sum}`) //literal strings :D
+
+        //escape sequences also work in Javascript \n (inside of strings!)
+        console.log(`The sum of \n${num1}\n+\n${num2}\n=${sum}`)
+        alert(`The sum is: \n${sum}!`)
+
+        //prompt user for value; waits for ENTER key
+        //promt() --> input () in PYTHON
+        prompt(`Enter your name: `)
+
+        //use the value provided by the user by ASSIGNING TO A VARIABLE
+        var name = prompt(`Enter your name: `)
+
+        console.log(`Name entered: ${name}`)
+
+        //all data returned from prompt() is a STRING; must convert to Number() if we want to math
+        var num = (prompt (`Enter a Number: `))
+
+        var square = Number(num) * Number(num)
+
+        console.log(square)
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
