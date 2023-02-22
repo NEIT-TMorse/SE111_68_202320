@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Katie Truchon 202040">
+<meta name="description" content="Week 6 JS Intro">
+<title>Week 6 | JS Intro</title>
+</head>
+
+<body>
+   <h1>Week 6 Calculator</h1>
+   
+   <p id="grossPay"></p>
+   <p id="uncleSam"></p>
+   <p id="netPay"></p>
+   
+   <script>
+
+      var wage = prompt("Enter your hourly wage: "); 
+			var hours = prompt("Enter your hours: ");
+
+      var gross = wage * hours;
+      document.getElementById("grossPay").innerHTML = "Gross Pay: $" + gross;
+      console.log( "Gross Pay: $" + gross);
+			var sam = gross * .20;
+			document.getElementById("uncleSam").innerHTML = "Uncle Sam's Share: $" + sam;
+      console.log("Uncle Sam's Share: $" + sam);
+      var net = gross - sam;
+      document.getElementById("netPay").innerHTML = "Net Pay: $" + net;
+      console.log("Net Pay: $" + net);
+      
+      alert(" Gross Pay: $" + gross + " Uncle Sam's Share: $" + sam + " Net Pay: $" + net);
+      
+   </script>
+
+</body>
+</html>
