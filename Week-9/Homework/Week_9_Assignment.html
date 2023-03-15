@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>W9 | Creating Elements</title>
+
+<style type="text/css">
+.border{border:1px solid black;
+padding: 15px;}
+</style>
+</head>
+
+<body>
+<!-- Body of Web page -->
+
+<h1>Week 9 | Creating Elements</h1>
+
+
+
+
+<script type="text/javascript">
+//Use this Array of objects to complete the assignment.
+var people =[
+{First:"Jason", Last:"Vorhees", Credit:"Friday the 13th", Fun_Fact: "Jason doesn't wear his signature hockey mask until Friday the 13th Part III. In the first movie released in 1980, he wears no masks or hats. In the 2nd movie, he wears a bag over his head." },
+{First:"Freddy", Last:"Krueger", Credit:"A Nightmare on Elm Street", Fun_Fact: "The first person he ever killed was his adopted father in the movie, Freddy's Dead. Also the man who played Freddy's adopted father was Alice Cooper. (Yes, as in the singer-songwriter.)" },
+{First:"Roger", Last:"Rabbit", Credit:"Who Framed Roger Rabbit", Fun_Fact: "Rumors circulated at one point that a sequel to Who Framed Roger Rabbit was in the works, but this is not true. Like no Joke, I met the actor who played Roger Rabbit at a Comic Convention years back and asked him about the ‘sequel’ and the rumors about it, and he did NOT react to my question well. If that’s not a fun fact than the famous myth about the car crash scene involving Jessica Rabbit's dress is true." },
+{First:"Kevin", Last:"McCallister", Credit:"Home Alone", Fun_Fact: "John Hughs 'The writer of the first Home Alone movie' wrote the script for the entire movie within a week, nine days to be exact. He based the movie on the idea behind a family trip gone wrong, using his father severe travelers anxiety as inspiration for the film." },
+{First:"Godzilla", Last:"King of The Monsters", Credit:"Godzilla", Fun_Fact: "While he's only shown the ability to do it once, Godzilla has a the ability to take flight. In the 1971 film Godzilla vs Hedorah, Godzilla once aimed and fired his Atomic breath on the ground to propel himself backward and fly. This is the only time ever where he has done this." },
+{First:"Buzz", Last:"Lightyear", Credit:"Toy Story", Fun_Fact: "In 1995, Thinkway Toys created the first ever Buzz Lightyear & Woody action figures one year before the first Toy Story movie hit theatres. They were hesistant in making the dolls as they feared the Toy Story Movie would not be popular and the amount of dolls they made would not meet consumer demands. In 2002, Disney purchased the rights to the original designs for the Woody & Buzz figures." },
+{First:"Marion", Last:"Cobretti", Credit:"Cobra", Fun_Fact: "The Black 1950 Mercury Monterey Coup that Sylvester Stallone's character drives in the movie was actually his own personal car. Several replicas of his car were made for the more Stunt Heavy scenes. After the movie, the car was stolen from his personal garage in 1994. Fifteen years later, Stallone discovered that his stolen car was going to be auctioned off by a company that provided 'As Seen in Movie' cars. Stallone had no idea if the company themselves were responsible for taking the car, but he filed a lawsuit to get his wheels back, and after reaching a settlement with the auction company, he won the suit and regained pocession of his car." }
+]
+
+var body = document.querySelector("body")
+console.log(body)
+console.dir(body)
+
+for(let i = 0; i < people.length; i++){
+var tempDiv = document.createElement("div")
+
+tempDiv.setAttribute("id", i)
+tempDiv.setAttribute(`class`, `border`)
+
+for(key in people[i]){
+var h3 = document.createElement("h3")
+var text1 = document.createTextNode(key)
+
+h3.appendChild(text1)
+tempDiv.appendChild(h3)
+
+var p = document.createElement(`p`)
+var text = document.createTextNode(people[i][key])
+p.appendChild(text)
+tempDiv.appendChild(p)
+
+}
+
+body.appendChild(tempDiv)
+}
+</script>
+</body>
+</html>
